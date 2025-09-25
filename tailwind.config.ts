@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -47,6 +48,8 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -59,9 +62,17 @@ export default {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
+        lg: "var(--radius-lg)",
+        md: "var(--radius)",
         sm: "calc(var(--radius) - 4px)",
+        xl: "var(--radius-xl)",
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
       },
       keyframes: {
         "accordion-down": {
