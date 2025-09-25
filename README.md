@@ -71,3 +71,25 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Docker
+
+This project includes a Dockerfile to build the app and serve it with nginx.
+
+
+Build the image (from the project root):
+
+```powershell
+docker build -t chic-bowl-showcase:latest .
+```
+
+Run a container locally on port 3000 (the Dockerfile runs `npm start` which launches `vite preview` on port 3000):
+
+```powershell
+docker run --rm -p 3000:3000 chic-bowl-showcase:latest
+```
+
+Notes:
+- The Dockerfile builds the app inside a Node container and then starts a `vite preview` server using `npm start` on port 3000.
+- If you want to run the development server (hot-reload) locally, use `npm run dev` instead of building the image.
+
